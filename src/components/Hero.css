@@ -1,0 +1,86 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, var(--preto) 0%, #1a1025 100%);
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-texto h2 {
+  font-size: 2.2rem;
+  color: var(--branco);
+  margin-bottom: 20px;
+}
+
+.hero-texto p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 500px;
+}
+
+.hero-foto {
+  flex: 0 0 auto;
+}
+
+.hero-foto img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  object-position: center 10%;
+  border-radius: 50%;
+  border: 4px solid var(--roxo);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background-color: var(--roxo);
+  color: var(--branco);
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--roxo-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-foto img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.cursor-piscando {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--roxo-claro);
+  animation: piscar-cursor 0.8s step-end infinite;
+}
+
+@keyframes piscar-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

@@ -1,0 +1,314 @@
+.projects {
+  padding: 60px 40px;
+  background-color: var(--preto);
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 1.8rem;
+  color: var(--roxo-claro);
+  margin-bottom: 40px;
+  display: inline-block;
+  border-bottom: 3px solid var(--roxo);
+  padding-bottom: 8px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: stretch;
+}
+
+.project-card {
+  background-color: #14101c;
+  border: 1px solid #2a1f3d;
+  border-radius: 14px;
+  padding: 18px;
+  transition: all 0.3s ease;
+  min-width: 0;
+
+  /* Faz o conteúdo do card ficar organizado verticalmente */
+  display: flex;
+  flex-direction: column;
+
+  /* Mantém todos os cards com a mesma altura */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  border-color: var(--roxo);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.35);
+}
+
+.laptop-mockup {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.laptop-tela {
+  background-color: #2a2a2a;
+  border-radius: 8px 8px 0 0;
+  padding: 5px;
+  border: 2px solid #3a3a3a;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.laptop-topo {
+  display: flex;
+  gap: 4px;
+  padding: 3px 5px;
+}
+
+.laptop-topo span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.laptop-conteudo {
+  height: 110px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #1c1526;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.laptop-base {
+  height: 8px;
+  background: linear-gradient(#3a3a3a, #1a1a1a);
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+
+.laptop-base::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: #555;
+  border-radius: 0 0 4px 4px;
+}
+
+.project-card h3 {
+  color: var(--branco);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: #b0a8c0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Tecnologias ficam sempre na parte inferior do card */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  background-color: rgba(124, 58, 237, 0.15);
+  color: var(--roxo-claro);
+  border: 1px solid var(--roxo);
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   GALERIA - ARTISTA
+   ========================= */
+
+.tela-galeria {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.galeria-header {
+  height: 10px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.galeria-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.galeria-grid span {
+  background: linear-gradient(135deg, #7c3aed, #2d1b4e);
+  border-radius: 3px;
+}
+
+
+/* =========================
+   CLIMA
+   ========================= */
+
+.tela-clima {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clima-card {
+  background-color: rgba(124, 58, 237, 0.15);
+  border: 1px solid var(--roxo);
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.clima-icone {
+  font-size: 1.1rem;
+}
+
+.clima-temp {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.clima-linha {
+  height: 5px;
+  width: 45px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  margin: 3px auto;
+}
+
+.clima-linha.curta {
+  width: 28px;
+}
+
+
+/* =========================
+   TAREFAS
+   ========================= */
+
+.tela-tarefas {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tarefa-check {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  border: 2px solid var(--roxo-claro);
+  flex-shrink: 0;
+}
+
+.tarefa-check.feito {
+  background-color: var(--roxo);
+}
+
+.tarefa-linha {
+  height: 6px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.tarefa-linha.curta {
+  width: 45%;
+}
+
+.tarefa-linha.riscada {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================
+   SDUI - DASHBOARD / VIEWER
+   ========================= */
+
+.tela-sdui {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sdui-topo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sdui-badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--roxo-claro);
+  flex-shrink: 0;
+}
+
+.sdui-linha-topo {
+  height: 8px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.sdui-conteudo {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.sdui-bloco {
+  border-radius: 4px;
+  background: linear-gradient(135deg, #7c3aed, #2d1b4e);
+}
+
+.sdui-bloco.grande {
+  flex: 2;
+}
+
+.sdui-coluna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sdui-bloco.pequeno {
+  flex: 1;
+  background: linear-gradient(135deg, #4c1d95, #1e1b2e);
+}

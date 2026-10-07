@@ -1,0 +1,77 @@
+.experience {
+  padding: 60px 40px;
+  background-color: var(--preto);
+  text-align: center;
+}
+
+.experience h2 {
+  font-size: 1.8rem;
+  color: var(--roxo-claro);
+  margin-bottom: 40px;
+  display: inline-block;
+  border-bottom: 3px solid var(--roxo);
+  padding-bottom: 8px;
+}
+
+.jornada-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.jornada-card {
+  background-color: #14101c;
+  border: 1px solid #2a1f3d;
+  border-radius: 14px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jornada-card.atual {
+  border-color: var(--roxo);
+  background: linear-gradient(135deg, #1a1025, #14101c);
+}
+
+.jornada-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+.jornada-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--roxo-claro);
+  margin-bottom: 14px;
+}
+
+.jornada-card h3 {
+  color: var(--branco);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.jornada-card p {
+  color: #b0a8c0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .jornada-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    padding: 50px 20px;
+  }
+}

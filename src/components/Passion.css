@@ -1,0 +1,51 @@
+.passion {
+  padding: 70px 40px;
+  background: linear-gradient(135deg, #1a1025 0%, var(--preto) 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.passion-content {
+  max-width: 700px;
+  text-align: left;
+  border-left: 3px solid var(--roxo);
+  padding-left: 28px;
+}
+
+.passion-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--roxo-claro);
+  margin-bottom: 18px;
+}
+
+.passion-content p {
+  color: #c9c0d8;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.passion-content strong {
+  color: var(--roxo-claro);
+  font-weight: 600;
+}
+
+.passion-final {
+  color: var(--branco) !important;
+  font-style: italic;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .passion {
+    padding: 50px 20px;
+  }
+
+  .passion-content {
+    padding-left: 18px;
+  }
+}

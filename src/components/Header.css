@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--preto);
+  border-bottom: 1px solid var(--roxo);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  color: var(--roxo-claro);
+  font-size: 1.5rem;
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: var(--roxo-claro);
+}
+
+/* Botão hambúrguer: escondido em telas grandes */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.hamburguer span {
+  display: block;
+  height: 2.5px;
+  width: 100%;
+  background-color: var(--roxo-claro);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Anima as 3 linhas virando um X */
+.hamburguer.aberto span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburguer.aberto span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.aberto span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Modo celular */
+@media (max-width: 700px) {
+  .header {
+    padding: 16px 20px;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
+
+  .header nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    background-color: #0d0d0d;
+    border-left: 1px solid var(--roxo);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px;
+    box-sizing: border-box;
+    transition: right 0.35s ease;
+  }
+
+  .header nav.nav-aberto {
+    right: 0;
+  }
+
+  .header nav a {
+    font-size: 1.1rem;
+  }
+}
+
+body {
+  padding-top: 80px;
+}

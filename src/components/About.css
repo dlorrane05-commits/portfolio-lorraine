@@ -1,0 +1,18 @@
+.about {
+  padding: 60px 40px;
+  background-color: var(--preto);
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  color: var(--roxo-claro);
+  margin-bottom: 20px;
+  border-left: 4px solid var(--roxo);
+  padding-left: 12px;
+}
+
+.about p {
+  color: #dddddd;
+  margin-bottom: 15px;
+  max-width: 800px;
+}
