@@ -2,7 +2,7 @@
 
 Portfólio pessoal desenvolvido com React, criado para apresentar minha trajetória, projetos e habilidades na área de Front-End.
 
-🔗 **[Ver portfólio ao vivo](https://portfolio-lorraine-zeta.vercel.app)**git add .
+🔗 **[Ver portfólio ao vivo](https://portfolio-lorraine-zeta.vercel.app)**
 
 ![Preview do portfólio](./preview.png)
 
